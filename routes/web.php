@@ -36,7 +36,7 @@ Route::get('stud_login','aboutController@loginPage');
 Route::get('/backend','adminController@backfunction');
 Route::get('/admin_dashboard','adminController@admin_dashboard')->middleware('auth');
 // Route::post('/adminlogin','adminController@login_dashboard');
-// Route::post('/logout','adminController@logout');
+Route::post('/logout','adminController@logout');
 
 Route::get('about-page', 'aboutController@abouts_page');
 Route::post('about_page','aboutController@about_page');

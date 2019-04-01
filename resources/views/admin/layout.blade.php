@@ -35,14 +35,97 @@
         <a class="nav-link" id="close-button" href="#"><i class="mdi mdi-window-close"></i></a>
       </li>
     </ul>
-
+    <div class="tab-content" id="setting-content">
+      <div class="tab-pane fade show active" id="layouts-section" role="tabpanel" aria-labelledby="layouts-tab">
+        <div class="color-tiles">
+          <div class="tiles primary" id="primary-theme"></div>
+          <div class="tiles success" id="success-theme"></div>
+          <div class="tiles warning" id="warning-theme"></div>
+          <div class="tiles danger" id="danger-theme"></div>
+          <div class="tiles pink" id="pink-theme"></div>
+          <div class="tiles info" id="info-theme"></div>
+          <div class="tiles dark" id="dark-theme"></div>
+          <div class="tiles light" id="light-theme"></div>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle btn-block mb-4" type="button" id="sidebar-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sidebar Mode
+          </button>
+          <div class="dropdown-menu" aria-labelledby="sidebar-color">
+            <a class="dropdown-item" href="#" id="side-theme-light">Light</a>
+            <a class="dropdown-item" href="#" id="side-theme-dark">Dark</a>
+          </div>
+        </div>
+        <div class="dropdown d-none d-md-block">
+          <button class="btn btn-secondary dropdown-toggle btn-block" type="button" id="Layouts-type" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Layouts
+          </button>
+          <div class="dropdown-menu" aria-labelledby="Layouts-type">
+            <a class="dropdown-item" href="#" id="boxed-layout-view">Boxed</a>
+            <a class="dropdown-item" href="#" id="compact-layout-view">Compact menu</a>
+            <a class="dropdown-item" href="#" id="icon-only-layout-view">Icon Menu</a>
+            <a class="dropdown-item" href="#" id="rtl-layout-view">RTL</a>
+            <a class="dropdown-item" href="#" id="hidden-menu-1-layout-view">Hidden Menu 1</a>
+            <a class="dropdown-item" href="#" id="hidden-menu-2-layout-view">Hidden Menu 2</a>
+          </div>
+        </div>
+      </div>
+      <!-- layout section tabends -->
+      <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-tab">
+        <ul class="chat-list">
+          <li class="list active">
+            <div class="profile"><img src="http://via.placeholder.com/47x47" alt=""><span class="online"></span></div>
+            <div class="info">
+              <p>Thomas Douglas</p>
+              <p>Available</p>
+            </div>
+          </li>
+          <li class="list">
+            <div class="profile"><img src="http://via.placeholder.com/47x47" alt=""><span class="online"></span></div>
+            <div class="info">
+              <p>Thomas Douglas</p>
+              <p>Available</p>
+            </div>
+          </li>
+          <li class="list">
+            <div class="profile"><img src="http://via.placeholder.com/47x47" alt=""></div>
+            <div class="info">
+              <p>Thomas Douglas</p>
+              <p>Available</p>
+            </div>
+          </li>
+          <li class="list">
+            <div class="profile"><img src="http://via.placeholder.com/47x47" alt=""><span class="ofline"></span></div>
+            <div class="info">
+              <p>Thomas Douglas</p>
+              <p>Available</p>
+            </div>
+          </li>
+          <li class="list">
+            <div class="profile"><img src="http://via.placeholder.com/47x47" alt=""><span class="online"></span></div>
+            <div class="info">
+              <p>Thomas Douglas</p>
+              <p>Available</p>
+            </div>
+          </li>
+          <li class="list">
+            <div class="profile"><img src="http://via.placeholder.com/47x47" alt=""></div>
+            <div class="info">
+              <p>Thomas Douglas</p>
+              <p>Available</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- chat section tabends -->
+    </div>
   </div>
   <!-- partial -->
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar navbar-light col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper">
-        <a class="navbar-brand brand-logo" href="{{URL::to('admin_dashboard')}}"><img src="images/salt_logo.svg" alt="Logo"></a>
+        <a class="navbar-brand brand-logo" href="index.html"><img src="images/salt_logo.svg" alt="Logo"></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
         <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
@@ -92,14 +175,13 @@
                   <p class="Sende-name">Setting</p>
                 </div>
               </a>
-
-              <a class="dropdown-item" href="{{URL::to('/admin-logout')}}">
+              <a class="dropdown-item" href="#">
                 <div class="sender-img">
                   <img src="http://via.placeholder.com/47x47" alt="">
                   <span class="badge badge-primary">&nbsp;</span>
                 </div>
                 <div class="sender">
-                  <p class="Sende-name">Admin Logout</p>
+                  <p class="Sende-name">Logout</p>
                 </div>
               </a>
             </div>
@@ -120,7 +202,7 @@
               <img src="http://via.placeholder.com/47x47" alt="">
             </div>
             <div class="details">
-              <p class="user-name">Dav Mazhar_ip</p>
+              <p class="user-name">Dave Mattew</p>
               <p class="designation">Developer</p>
             </div>
           </div>
@@ -129,240 +211,214 @@
             <li class="nav-item nav-category">
               <span class="nav-link">Main</span>
             </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#sidebar_layouts" aria-expanded="false" aria-controls="sidebar_layouts">
-                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
-                <span class="menu-title" href="{{URL::to('/admission')}}">Admission</span>
-                <i class="mdi mdi-chevron-down menu-arrow"></i>
-              </a>
-              <div class="collapse" id="sidebar_layouts">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/new-admission')}}">New Admission</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="">Manage Admission</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-
-
-            <li class="nav-item">
+             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#errorSubmenu" aria-expanded="false" aria-controls="errorSubmenu">
                 <i class="mdi mdi-alert-circle-outline menu-icon"></i>
-                <span class="menu-title">Notice Board</span>
+                <span class="menu-title">Admission</span>
                 <i class="mdi mdi-chevron-down menu-arrow"></i>
               </a>
               <div class="collapse" id="errorSubmenu">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
                     <a class="nav-link" href="pages/samples/error-404.html">
-                      Add notice
+                      New Admission 
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="pages/samples/error-500.html">
-                      Mange Notice 
+                      Manage Admission
                     </a>
                   </li>
                 </ul>
               </div>
             </li>
-
-            
-            <li class="nav-item">    
-              <a class="nav-link" href="{{URL::to('/allstudents')}}">
+               <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#errorSubmenu" aria-expanded="false" aria-controls="errorSubmenu">
+                <i class="mdi mdi-alert-circle-outline menu-icon"></i>
+                <span class="menu-title"> Notice Board</span>
+                <i class="mdi mdi-chevron-down menu-arrow"></i>
+              </a>
+              <div class="collapse" id="errorSubmenu">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/samples/error-404.html">
+                      Add Notice
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/samples/error-500.html">
+                      Manage Notice
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
                 <i class="mdi mdi-gauge menu-icon"></i>
                 <span class="menu-title">Our All Student</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{URL::to('/addstudent')}}">
+              <a class="nav-link" href="pages/widgets.html">
                 <i class="mdi mdi-puzzle menu-icon"></i>
                 <span class="menu-title">Add Student</span>
                 <span class="badge badge-danger badge-pill ml-auto">New</span>
               </a>
             </li>
-
             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#generalSubmenu" aria-expanded="false" aria-controls="generalSubmenu">
-                <i class="mdi mdi-google-pages menu-icon"></i>
-                <span class="menu-title" href="{{URL::to('/studentportal')}}">student Portal Pages</span>
+              <a class="nav-link" data-toggle="collapse" href="#layoutsSubmenu" aria-expanded="false" aria-controls="layoutsSubmenu">
+                <i class="mdi mdi-arrow-expand-all menu-icon"></i>
+                <span class="menu-title">Student Portal</span>
                 <i class="mdi mdi-chevron-down menu-arrow"></i>
               </a>
-              <div class="collapse" id="generalSubmenu">
+              <div class="collapse" id="layoutsSubmenu">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/student-dashboard')}}">Dashboard</a>
+                    <a class="nav-link" href="pages/layout/boxed-layout.html">Dashboard</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">Profile</a>
+                    <a class="nav-link" href="pages/layout/boxed-layout.html">Profile</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
-                     Update Profile
-                    </a>
+                    <a class="nav-link" href="pages/layout/boxed-layout.html">Update Profile</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link" href="pages/layout/boxed-layout.html">Password Change</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link" href="pages/layout/boxed-layout.html">Payment Ledger</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link" href="pages/layout/boxed-layout.html">Payment Schema</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
-                      Password change
-                    </a>
+                    <a class="nav-link" href="pages/layout/rtl-layout.html">tution fees</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
-                      Payment Ledger
-                    </a>
+                    <a class="nav-link" href="pages/layout/boxed-layout.html">Register Course</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link" href="pages/layout/boxed-layout.html">Routine</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link" href="pages/layout/boxed-layout.html">Drop Year</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
-                      Payment schema
-                    </a>
+                    <a class="nav-link" href="pages/layout/horizontal-menu.html">live result</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link" href="pages/layout/boxed-layout.html">Exam clearance & Transcript Certificate/</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
-                      Tution fees
-                    </a>
+                    <a class="nav-link" href="pages/layout/boxed-layout.html">Result</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
-                      Drop session
-                    </a>
+                    <a class="nav-link" href="pages/layout/boxed-layout.html">Student Application</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
-                      Register Courses
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
-                      Routine
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
-                      Live result
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
-                    Exam clearance
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
-                    Transcript Certificate
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
-                      Result
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
-                      Student Application
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
-                      Logout
-                    </a>
+                    <li class="nav-item">
+                    <a class="nav-link" href="pages/layout/boxed-layout.html">Logout</a>
                   </li>
                 </ul>
               </div>
             </li>
-
             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#textEditorSubmenu" aria-expanded="false" aria-controls="textEditorSubmenu">
-                <i class="mdi mdi-pencil menu-icon"></i>
+              <a class="nav-link" data-toggle="collapse" href="#sidebar_layouts" aria-expanded="false" aria-controls="sidebar_layouts">
+                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
                 <span class="menu-title">Our Courses</span>
                 <i class="mdi mdi-chevron-down menu-arrow"></i>
               </a>
-              <div class="collapse" id="textEditorSubmenu">
+              <div class="collapse" id="sidebar_layouts">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">SWE</a>
+                    <a class="nav-link" href="pages/layout/compact-menu.html">SWE</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">CSE</a>
+                    <a class="nav-link" href="pages/layout/sidebar-collapsed.html">CSE</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">EEE</a>
+                    <a class="nav-link" href="pages/layout/sidebar-hidden.html">EEE</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">BBA</a>
+                    <a class="nav-link" href="pages/layout/sidebar-hidden-overlay.html">TEXTILE</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">MBA</a>
+                    <a class="nav-link" href="pages/layout/sidebar-fixed.html">BBA</a>
                   </li>
                 </ul>
               </div>
-          </li>
+            </li>
             <!--main pages end-->
 
-             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#validationSubmenu" aria-expanded="false" aria-controls="validationSubmenu">
-                <i class="mdi mdi-flag-outline menu-icon"></i>
-                <span class="menu-title" href="">Testimonial</span>
-                <i class="mdi mdi-chevron-down menu-arrow"></i>
-              </a>
-              <div class="collapse" id="validationSubmenu">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">Add Testimonial</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">Manage Testimonial</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-
             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#formsSubmenu" aria-expanded="false" aria-controls="formsSubmenu">
-                <i class="mdi mdi-clipboard-outline menu-icon"></i>
-                <span class="menu-title" href="{{URL::to('/')}}">Our Teachers</span>
+              <a class="nav-link" data-toggle="collapse" href="#errorSubmenu" aria-expanded="false" aria-controls="errorSubmenu">
+                <i class="mdi mdi-alert-circle-outline menu-icon"></i>
+                <span class="menu-title"> Testimonial</span>
                 <i class="mdi mdi-chevron-down menu-arrow"></i>
               </a>
-              <div class="collapse" id="formsSubmenu">
+              <div class="collapse" id="errorSubmenu">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">Name 1</a>
+                    <a class="nav-link" href="pages/samples/error-404.html">
+                      Add Testimonial
+                    </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">Name 2</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">Name 3</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">Name 4</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">Name 5</a>
+                    <a class="nav-link" href="pages/samples/error-500.html">
+                      Manage Testimonial
+                    </a>
                   </li>
                 </ul>
               </div>
             </li>
-
-             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#sliderSubmenu" aria-expanded="false" aria-controls="sliderSubmenu">
-                <i class="mdi mdi-bulletin-board menu-icon"></i>
-                <span class="menu-title" href="{{URL::to('/')}}">Respected Ex teachers</span>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ecommerceSubmenu" aria-expanded="false" aria-controls="ecommerceSubmenu">
+                <i class="mdi mdi-cart-outline menu-icon"></i>
+                <span class="menu-title">Our teacher</span>
                 <i class="mdi mdi-chevron-down menu-arrow"></i>
               </a>
-              <div class="collapse" id="sliderSubmenu">
+              <div class="collapse" id="ecommerceSubmenu">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/ui-features/no-ui-slider.html">Ex Principal</a>
+                    <a class="nav-link" href="pages/samples/pricing.html">
+                      Name 1
+                    </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/ui-features/no-ui-slider.html">Ex Assistance Principal</a>
+                    <a class="nav-link" href="pages/samples/invoice.html">
+                       Name 2
+                    </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/ui-features/ion-range-slider.html">Ex teachers</a>
+                    <a class="nav-link" href="pages/samples/orders.html">
+                      Name 3 
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ecommerceSubmenu" aria-expanded="false" aria-controls="ecommerceSubmenu">
+                <i class="mdi mdi-cart-outline menu-icon"></i>
+                <span class="menu-title">Respected Ex teacher</span>
+                <i class="mdi mdi-chevron-down menu-arrow"></i>
+              </a>
+              <div class="collapse" id="ecommerceSubmenu">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/samples/pricing.html">
+                      Ex Principal
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/samples/invoice.html">
+                       Ex Assistance Principal
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/samples/orders.html">
+                      Ex teachers
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -372,70 +428,74 @@
             <!-- ui end -->
 
             <!--forms start-->
+            <li class="nav-item nav-category">
+              <span class="nav-link">Forms</span>
+            </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#fileUploadSubmenu" aria-expanded="false" aria-controls="fileUploadSubmenu">
-                <i class="mdi mdi-attachment menu-icon"></i>
-                <span class="menu-title">File upload</span>
+              <a class="nav-link" data-toggle="collapse" href="#formsSubmenu" aria-expanded="false" aria-controls="formsSubmenu">
+                <i class="mdi mdi-clipboard-outline menu-icon"></i>
+                <span class="menu-title">Institution Gallery</span>
                 <i class="mdi mdi-chevron-down menu-arrow"></i>
               </a>
-              <div class="collapse" id="fileUploadSubmenu">
+              <div class="collapse" id="formsSubmenu">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/forms/dropify.html">Dropify</a>
+                    <a class="nav-link" href="pages/forms/basic-elements.html">Mother-language day</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/forms/dropzone.html">Dropzone</a>
+                    <a class="nav-link" href="pages/forms/x-editable.html"></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/forms/jquery-file-upload.html">Jquery upload</a>
+                    <a class="nav-link" href="pages/forms/typeahead.html">Independence Day</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/forms/form-repeater.html">Annual Picnic</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/forms/form-mask.html">Farewell Event</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/forms/form-mask.html">Annual Sports Event</a>
                   </li>
                 </ul>
               </div>
             </li>
-
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#advancedSubmenu" aria-expanded="false" aria-controls="advancedSubmenu">
-                <i class="mdi mdi-repeat menu-icon" href="">Institution Gallery</i>
-                <span class="menu-title"></span>
+                <i class="mdi mdi-repeat menu-icon"></i>
+                <span class="menu-title">Institution Director Board</span>
                 <i class="mdi mdi-chevron-down menu-arrow"></i>
               </a>
               <div class="collapse" id="advancedSubmenu">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">Mother-language day</a>
+                    <a class="nav-link" href="pages/forms/form-addons.html"></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">Independence Day</a>
+                    <a class="nav-link" href="pages/forms/form-picker.html">Form Picker</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">Annual Picnic</a>
+                    <a class="nav-link" href="pages/forms/bt-select-splitter.html">Splitter</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">Farewell Event</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">Annual Sports Event</a>
+                    <a class="nav-link" href="pages/forms/icheck.html">Icheck</a>
                   </li>
                 </ul>
               </div>
             </li>
-
             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#uiPopupSubmenu" aria-expanded="false" aria-controls="uiPopupSubmenu">
-                <i class="mdi mdi-message-text-outline menu-icon"></i>
-                <span class="menu-title" href="{{URL::to('/')}}">Authority</span>
+              <a class="nav-link" data-toggle="collapse" href="#validationSubmenu" aria-expanded="false" aria-controls="validationSubmenu">
+                <i class="mdi mdi-flag-outline menu-icon"></i>
+                <span class="menu-title">Validation</span>
                 <i class="mdi mdi-chevron-down menu-arrow"></i>
               </a>
-              <div class="collapse" id="uiPopupSubmenu">
+              <div class="collapse" id="validationSubmenu">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">1</a>
+                    <a class="nav-link" href="pages/forms/form-validation.html">Form validation</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">2</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">3</a>
+                    <a class="nav-link" href="pages/forms/bt-maxlength.html">Maxlength</a>
                   </li>
                 </ul>
               </div>
@@ -448,7 +508,7 @@
         <!-- partial -->
         <div class="content-wrapper">
           <div class="row">
-              @yield('content')
+          @yield('content')
           </div>
         </div>
         <!-- content-wrapper ends -->

@@ -49,14 +49,11 @@ class adminController extends Controller
       }
     }
 
-
     // logout function
     public function logout(){
       Session_flush();
       return Redirect::to('backend');
     }
-
-
 
    }
  

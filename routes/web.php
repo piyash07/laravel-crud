@@ -30,8 +30,10 @@ Route::get('/backend',function(){
 Route::get('stud_login','aboutController@loginPage');
 
 
-
 //-------------
+
+Route::get('/','adminController@logout');
+
 
 Route::get('/backend','adminController@backfunction');
 Route::get('/admin_dashboard','adminController@admin_dashboard')->middleware('auth');
@@ -68,3 +70,71 @@ Route::get('delete/{id}','StudDeleteController@destroy');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//----------------------------------------------------------
+//----------------------------------------------------------
+//AdmissionController
+Route::get('/admission','AdmissionController@admission');
+Route::get('/new-admission','AdmissionController@new_admission');
+Route::get('/manage-admission','AdmissionController@manage_admission');
+//notice_board 
+Route::get('/noticeboard','NoticeBoardController@notice_board');
+Route::get('/add-notice','NoticeBoardController@add_notice');
+Route::get('/manage-notice','NoticeBoardController@manage_notice');
+
+//----- addstudents
+Route::get('/addstudent','AddstudentsController@addstudents');
+//allstudents
+Route::get('/allstudents','allstudentController@allstudents');
+
+Route::get('/tutionfees','tutionsController@tutionfees');
+
+//StudentPortal
+Route::get('/studentportal','StudentPortalController@portal');
+
+Route::get('/student-dashboard','StudentPortalController@student_dashboard');
+Route::get('/profile','StudentPortalController@profile');
+Route::get('/','StudentPortalController@portal');
+Route::get('/','StudentPortalController@portal');
+Route::get('/','StudentPortalController@portal');
+Route::get('/','StudentPortalController@portal');
+Route::get('/','StudentPortalController@portal');
+Route::get('/','StudentPortalController@portal');
+Route::get('/','StudentPortalController@portal');
+Route::get('/','StudentPortalController@portal');
+Route::get('/','StudentPortalController@portal');
+Route::get('/','StudentPortalController@portal');
+Route::get('/','StudentPortalController@portal');
+Route::get('/','StudentPortalController@portal');
+
+Route::get('/','coursesController@courses');
+
+Route::get('/swe','SWEController@swe');
+Route::get('/cse','CSEController@cse');
+Route::get('/eee','EEEController@eee');
+Route::get('/bba','BBAController@bba');
+
+Route::get('/','teachersController@');
+
+Route::get('/','testimonialController@');
+
+Route::get('/','institutionGalleryController@');
+
+Route::get('/','institutionBoardController@');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

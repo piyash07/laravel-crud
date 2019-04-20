@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="{{asset('css/style.css')}}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{asset('images/favicon.html')}}"/>
+  <style type="text/css">
+    
+  </style>
 </head>
 <body class="sidebar-dark">
   <!-- partial:partials/_settings-panel.html -->
@@ -158,12 +161,12 @@
               <div class="collapse" id="errorSubmenu">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/samples/error-404.html">
+                    <a class="nav-link" href="{{URL::to('/add-notice')}}">
                       Add notice
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/samples/error-500.html">
+                    <a class="nav-link" href="{{URL::to('/manage-notice')}}">
                       Mange Notice 
                     </a>
                   </li>
@@ -198,75 +201,75 @@
                     <a class="nav-link" href="{{URL::to('/student-dashboard')}}">Dashboard</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">Profile</a>
+                    <a class="nav-link" href="{{URL::to('/profile')}}">Profile</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
+                    <a class="nav-link" href="{{URL::to('/update-profile')}}">
                      Update Profile
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
+                    <a class="nav-link" href="{{URL::to('/password-change')}}">
                       Password change
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
+                    <a class="nav-link" href="{{URL::to('/payment-ledger')}}">
                       Payment Ledger
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
+                    <a class="nav-link" href="{{URL::to('/payment-schema')}}">
                       Payment schema
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
+                    <a class="nav-link" href="{{URL::to('/tution-fees')}}">
                       Tution fees
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
+                    <a class="nav-link" href="{{URL::to('/drop-session')}}">
                       Drop session
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
+                    <a class="nav-link" href="{{URL::to('/register-courses')}}">
                       Register Courses
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
+                    <a class="nav-link" href="{{URL::to('/routine')}}">
                       Routine
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
+                    <a class="nav-link" href="{{URL::to('/live-result')}}">
                       Live result
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
+                    <a class="nav-link" href="{{URL::to('/exam-clearance')}}">
                     Exam clearance
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
+                    <a class="nav-link" href="{{URL::to('/transcript')}}">
                     Transcript Certificate
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
+                    <a class="nav-link" href="{{URL::to('/result')}}">
                       Result
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
+                    <a class="nav-link" href="{{URL::to('/application')}}">
                       Student Application
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/')}}">
+                    <a class="nav-link" href="{{URL::to('/logout')}}">
                       Logout
                     </a>
                   </li>
@@ -356,13 +359,13 @@
               <div class="collapse" id="sliderSubmenu">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/ui-features/no-ui-slider.html">Ex Principal</a>
+                    <a class="nav-link" href="{{URL::to('/')}}">Ex Principal</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/ui-features/no-ui-slider.html">Ex Assistance Principal</a>
+                    <a class="nav-link" href="{{URL::to('/')}}">Ex Assistance Principal</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/ui-features/ion-range-slider.html">Ex teachers</a>
+                    <a class="nav-link" href="{{URL::to('/')}}">Ex teachers</a>
                   </li>
                 </ul>
               </div>
@@ -381,13 +384,13 @@
               <div class="collapse" id="fileUploadSubmenu">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/forms/dropify.html">Dropify</a>
+                    <a class="nav-link" href="{{URL::to('/')}}">Dropify</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/forms/dropzone.html">Dropzone</a>
+                    <a class="nav-link" href="{{URL::to('/')}}">Dropzone</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/forms/jquery-file-upload.html">Jquery upload</a>
+                    <a class="nav-link" href="{{URL::to('/')}}">Jquery upload</a>
                   </li>
                 </ul>
               </div>
@@ -496,7 +499,5 @@
   <script src="{{asset('js/dashboard_1.js')}}"></script>
   <!-- End custom js for this page-->
 </body>
-
-
 <!-- Mirrored from www.urbanui.com/salt/jquery/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Dec 2017 12:32:50 GMT -->
 </html>

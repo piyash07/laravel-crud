@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
 
-this is tution pages.
+this is tution fee pages.
 
 @endSection

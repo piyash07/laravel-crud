@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
 
-this is result page.
+this is payment schema page.
 
 @endSection

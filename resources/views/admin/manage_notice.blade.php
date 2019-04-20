@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
 
-this is result page.
+ this is manage notice page.
 
 @endSection

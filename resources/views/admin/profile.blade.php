@@ -1,8 +1,6 @@
 @extends('layout')
 @section('content')
 
+this is profile page.
 
-  this is all student page.
-
-
-@endsection
+@endSection
